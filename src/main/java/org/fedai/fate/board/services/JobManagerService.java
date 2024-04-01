@@ -200,7 +200,7 @@ public class JobManagerService {
         reqMap.put(Dict.PAGE, pagedJobQO.getPageNum().intValue());
         reqMap.put(Dict.ORDER, pagedJobQO.getOrderRule());
 
-        Map<String, Object> jobMap = getJobMap(reqMap);
+        Map<String, Object> jobMap = getJobMap(reqMap); // 这里分页查询
         List<JobDO> jobWithBLOBs = new ArrayList<>();
         long count = 0;
         if (jobMap != null) {
